@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		123FFF75261CCFD500FC018A /* SomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123FFF74261CCFD400FC018A /* SomePage.swift */; };
 		12BB73492618A6860034A270 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12BB73482618A6860034A270 /* AppDelegate.swift */; };
 		12BB734B2618A6860034A270 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12BB734A2618A6860034A270 /* SceneDelegate.swift */; };
 		12BB734D2618A6860034A270 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12BB734C2618A6860034A270 /* LoginViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		123FFF74261CCFD400FC018A /* SomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomePage.swift; sourceTree = "<group>"; };
 		12BB73452618A6860034A270 /* weatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12BB73482618A6860034A270 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12BB734A2618A6860034A270 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				12BB734C2618A6860034A270 /* LoginViewController.swift */,
+				123FFF74261CCFD400FC018A /* SomePage.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				12BB73532618A6860034A270 /* weatherApp.xcdatamodeld in Sources */,
+				123FFF75261CCFD500FC018A /* SomePage.swift in Sources */,
 				12BB734D2618A6860034A270 /* LoginViewController.swift in Sources */,
 				12BB73492618A6860034A270 /* AppDelegate.swift in Sources */,
 				12BB734B2618A6860034A270 /* SceneDelegate.swift in Sources */,
