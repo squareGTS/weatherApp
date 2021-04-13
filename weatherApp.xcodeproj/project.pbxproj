@@ -14,6 +14,7 @@
 		1270EDA126232942004AC7A1 /* ForecastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1270EDA026232942004AC7A1 /* ForecastCell.swift */; };
 		12B339B12624C828007C6C0A /* Graphic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12B339B02624C827007C6C0A /* Graphic.storyboard */; };
 		12B339B62624C96A007C6C0A /* File0.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B339B52624C96A007C6C0A /* File0.swift */; };
+		12B339C12626167D007C6C0A /* AvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B339C02626167D007C6C0A /* AvatarImageView.swift */; };
 		12BB73492618A6860034A270 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12BB73482618A6860034A270 /* AppDelegate.swift */; };
 		12BB734B2618A6860034A270 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12BB734A2618A6860034A270 /* SceneDelegate.swift */; };
 		12BB734D2618A6860034A270 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12BB734C2618A6860034A270 /* LoginViewController.swift */; };
@@ -32,6 +33,7 @@
 		1270EDA026232942004AC7A1 /* ForecastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastCell.swift; sourceTree = "<group>"; };
 		12B339B02624C827007C6C0A /* Graphic.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Graphic.storyboard; sourceTree = "<group>"; };
 		12B339B52624C96A007C6C0A /* File0.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File0.swift; sourceTree = "<group>"; };
+		12B339C02626167D007C6C0A /* AvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarImageView.swift; sourceTree = "<group>"; };
 		12BB73452618A6860034A270 /* weatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12BB73482618A6860034A270 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12BB734A2618A6860034A270 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 			children = (
 				12B339B02624C827007C6C0A /* Graphic.storyboard */,
 				12B339B52624C96A007C6C0A /* File0.swift */,
+				12B339C02626167D007C6C0A /* AvatarImageView.swift */,
 			);
 			path = Graphic;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 				12BB734D2618A6860034A270 /* LoginViewController.swift in Sources */,
 				12BB73492618A6860034A270 /* AppDelegate.swift in Sources */,
 				1270ED9626230060004AC7A1 /* CityCell.swift in Sources */,
+				12B339C12626167D007C6C0A /* AvatarImageView.swift in Sources */,
 				12BB734B2618A6860034A270 /* SceneDelegate.swift in Sources */,
 				12B339B62624C96A007C6C0A /* File0.swift in Sources */,
 			);

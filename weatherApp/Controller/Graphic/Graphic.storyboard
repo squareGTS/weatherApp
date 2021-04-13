@@ -12,7 +12,7 @@
         <scene sceneID="t8e-Sb-5jF">
             <objects>
                 <viewController id="JIZ-09-8RC" customClass="TestViewController" customModule="weatherApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="rhX-3R-fkw">
+                    <view key="view" contentMode="scaleToFill" id="rhX-3R-fkw" customClass="TestView" customModule="weatherApp" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="PSg-bP-Y2Y"/>
