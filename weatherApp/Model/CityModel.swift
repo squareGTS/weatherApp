@@ -9,5 +9,9 @@ import UIKit
 
 struct CityModel: Equatable {
     var cityName: String
-    var cityEmblem: UIImage
+    var cityEmblem: UIImage?
+    
+    static func == (lhs: Self, rhs: Self) -> Bool {
+        lhs.cityName == rhs.cityName
+    }
 }

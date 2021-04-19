@@ -1,17 +1,19 @@
 //
-//  CityCell.swift
+//  CityCellTableViewCell.swift
 //  weatherApp
 //
-//  Created by Maxim Bekmetov on 11.04.2021.
+//  Created by Maxim Bekmetov on 18.04.2021.
 //
 
 import UIKit
 
 class CityCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-
+    @IBOutlet weak var cityEmblemImageView: AvatarImage!
+    @IBOutlet weak var cityNameLabel: UILabel!
+    
+    func configure(name: String, image: UIImage?) {
+        cityNameLabel.text = name
+        cityEmblemImageView.image = image
     }
-
 }

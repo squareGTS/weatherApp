@@ -9,60 +9,62 @@ import UIKit
 
 class ForecastController: UICollectionViewController {
 
+    var forecastModels = [ForecastModel(tempIcon: UIImage(named: "sun"), temperature: "+16", date: "today"),
+                          ForecastModel(tempIcon: UIImage(named: "clouds"), temperature: "+17", date: "today"),
+                          ForecastModel(tempIcon: UIImage(named: "sun"), temperature: "+18", date: "today"),
+                          ForecastModel(tempIcon: UIImage(named: "clouds"), temperature: "+19", date: "today"),
+                          ForecastModel(tempIcon: UIImage(named: "sun"), temperature: "+20", date: "today"),
+                          ForecastModel(tempIcon: UIImage(named: "sun"), temperature: "+21", date: "today"),
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "forecastCell")
+        let nib = UINib(nibName: "View", bundle: nil)
+        collectionView.register(nib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "sectionHeader")
+        
+        let cellNib = UINib(nibName: "ForecastCell", bundle: nil)
+        collectionView.register(cellNib, forCellWithReuseIdentifier: "ForecastCell")
     }
 
     // MARK: UICollectionViewDataSource
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 0
+        return forecastModels.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "forecastCell", for: indexPath) as? ForecastCell
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ForecastCell", for: indexPath) as? ForecastCell else { return UICollectionViewCell() }
         
-        cell?.configurate()
+        
+        let currentForecast = forecastModels[indexPath.item]
+        cell.configure(temperature: currentForecast.temperature, tempIcon: currentForecast.tempIcon, date: currentForecast.date)
     
-        return UICollectionViewCell()
+        return cell
     }
 
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
+    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        switch kind {
+        case  UICollectionView.elementKindSectionHeader:
+        print("elementKindSectionHeader")
+            return UICollectionReusableView()
+        case UICollectionView.elementKindSectionFooter:
+            print("elementKindSectionFooter")
+            return UICollectionReusableView()
+        default:
+         return UICollectionReusableView()
+        }
     }
-    */
+}
 
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
+extension ForecastController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        CGSize(width: collectionView.bounds.width / 2, height: collectionView.bounds.height / 2)
     }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
     
-    }
-    */
-
+    
 }

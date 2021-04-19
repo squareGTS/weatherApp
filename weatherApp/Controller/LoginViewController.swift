@@ -17,8 +17,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var buttonPressed: UIButton!
     
-    
-    
     override func loadView() {
         super.loadView()
         // load view

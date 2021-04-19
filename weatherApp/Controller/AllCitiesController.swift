@@ -9,12 +9,21 @@ import UIKit
 
 class AllCitiesController: UITableViewController {
     
-    let cities = ["Moscow", "Saint-Petersburg", "Nizhniy Novgorod", "Sydney", "Auckland",]
+    @IBOutlet weak var headerView: UIView!
     
-    let modelCities = [CityModel(cityName: "Oslo", cityEmblem: UIImage())]
+    let cities = [CityModel(cityName: "Moscow", cityEmblem: UIImage(named: "mo")),
+                  CityModel(cityName: "Saint-Petersburg", cityEmblem: UIImage(named: "spb")),
+                  CityModel(cityName: "Nizhniy Novgorod", cityEmblem: UIImage(named: "nn")),
+                  CityModel(cityName: "Sydney", cityEmblem: UIImage(named: "sy")),
+                  CityModel(cityName: "Auckland", cityEmblem: UIImage(named: "au")),]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let nib = UINib(nibName: "CityCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "CityCell")
+        
+        tableView.tableHeaderView = headerView
+        //tableView.tableFooterView = headerView
 
     }
 
@@ -23,15 +32,17 @@ class AllCitiesController: UITableViewController {
     }
 
     override func tableView(_ collectionView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "AllCitiesCell", for: indexPath)
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CityCell", for: indexPath) as? CityCell else { return UITableViewCell() }
 
-        cell.textLabel?.text = cities[indexPath.row]
+        cell.configure(name: cities[indexPath.row].cityName, image: cities[indexPath.row].cityEmblem)
         
         return cell
     }
     
     //MARK: - Table view delegate methods
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-      //  tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: "addCity", sender: nil)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
